@@ -2,59 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* Contenedor de la barra */
-.navbar {
+/* Fondo estilo cielo + naturaleza */
+body {
+    background: linear-gradient(to bottom,#37812d ,#7aac4e,#427e24, #37812d );
+    min-height: 100vh;
+}
+
+/* HEADER FRUTIGER AERO */
+.header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #fff;
-    padding: 15px 30px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    align-items: center;
+    padding: 20px 60px;
+
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.952);
+    box-shadow: 0 8px 32px rgba(0, 255, 150, 0.2);
 }
 
-/* Logo/info izquierda */
-.nav-logo {
-    font-size: 1.6rem;
+/* Logo */
+.logo {
+    font-size: 1.8rem;
     font-weight: bold;
-    text-decoration: none;
-    color: #2a2a2a;
+    color: #617c66;
+    text-shadow: 0 0 8px rgba(110, 139, 125, 0.8);
 }
 
-/* Lista de menú */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-menu li a {
+/* NAV */
+.nav a {
+    margin-left: 25px;
     text-decoration: none;
-    font-size: 1rem;
+    color: #969c9b;
     font-weight: 500;
-    color: #2a2a2a;
-    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s ease;
 }
 
-.nav-menu li a:hover {
-    color: #1b8c4a;
+/* Hover efecto vidrio brillante */
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(15, 19, 17, 0.6);
+    color: #070a0a;
 }
 
-/* Botón de inicio de sesión circular */
-.btn-login {
-    text-decoration: none;
-    background-color: #1b8c4a;
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+/* SECCIÓN BIENVENIDA */
+.welcome {
+    text-align: center;
+    margin-top: 120px;
+    color: rgb(219, 219, 219);
 }
 
-.btn-login:hover {
-    background-color: #166f3b;
-    transform: scale(1.05);
+.welcome h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }

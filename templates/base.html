@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Estilo Greenpeace</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
-    <div class="nav-left">
-        <a href="#" class="nav-logo">🌿 EcoApp</a>
+    
+    <header class="header">
+    <div class="logo">
+        🌎 EcoWord
     </div>
 
-    <ul class="nav-menu">
-        <li><a href="#informate">Informate</a></li>
-        <li><a href="#donacion">Donación</a></li>
-        <li><a href="#comunidad">Comunidad</a></li>
-    </ul>
-
-    <div class="nav-right">
-        <a href="#login" class="btn-login">Iniciar Sesión</a>
-    </div>
-</nav>
-
+    <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Infórmate</a>
+        <a href="#">Comunidad</a>
+        <a href="#">Donar</a>
+        <a href="#">Iniciar Sesión</a>
+    </nav>
+</header>
+{% block content%}
+{% endblock %}
 </body>
 </html>
