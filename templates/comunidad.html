@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Bienvenido a nuesta comunid, EcoWord</h2>
+<p>Este formulario es para ser un miembro activo de nuesta hermosa comunidad, te invitamos a colaborar entre todos</p>
+<form action="{{ url_for('comunidad') }}" method="post" class="Formulario_ambiental"> 
+    <label for="name">Nombre de Usuario:</label>
+    <input type="text" name="name" id="name" required>
+    <select name="categoria" id="categoria">
+        <option value="denuncias">Denuncias</option>
+        <option value="recursos">Recursos</option>
+        <option value="acciones">Acciones</option>
+    </select>
+    <label for="title">Título:</label>
+    <input type="text" name="title" id="title" required>
+    <textarea name="content" id="content" cols="30" rows="10" placeholder="Comparte tu denuncia, recurso o acción aquí..."></textarea>
+    <button type="submit">Publicar</button>
+</form>
+
+{% for post in posts %}
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.categoria}}</p>
+            <p><strong>{{ post.name }}</strong> en categoría <em>{{ post.categoria }}</em></p>
+            <p>{{ post.content }}</p>
+        </div>
+    {% else %}
+        <p>No hay publicaciones en la comunidad aún. ¡Sé el primero en compartir!</p>
+    {% endfor %}
+
+{% endblock %}

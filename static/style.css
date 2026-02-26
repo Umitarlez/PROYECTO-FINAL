@@ -7,7 +7,7 @@
 
 /* Fondo estilo cielo + naturaleza */
 body {
-    background: linear-gradient(to bottom,#37812d ,#7aac4e,#427e24, #37812d );
+    background: linear-gradient(to bottom,#e9eee8 , #fcfdfc );
     min-height: 100vh;
 }
 
@@ -23,15 +23,15 @@ body {
     -webkit-backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.952);
-    box-shadow: 0 8px 32px rgba(0, 255, 150, 0.2);
+    box-shadow: 0 8px 32px rgba(1, 20, 12, 0.2);
 }
 
 /* Logo */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #617c66;
-    text-shadow: 0 0 8px rgba(110, 139, 125, 0.8);
+    color: #f6fdf7;
+    text-shadow: 0 0 8px rgba(2, 8, 6, 0.8);
 }
 
 /* NAV */
@@ -47,7 +47,7 @@ body {
 
 /* Hover efecto vidrio brillante */
 .nav a:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(245, 242, 242, 0.74);
     box-shadow: 0 0 15px rgba(15, 19, 17, 0.6);
     color: #070a0a;
 }
@@ -56,7 +56,7 @@ body {
 .welcome {
     text-align: center;
     margin-top: 120px;
-    color: rgb(219, 219, 219);
+    color: rgb(5, 4, 4);
 }
 
 .welcome h1 {
@@ -67,4 +67,74 @@ body {
 .welcome p {
     font-size: 1.2rem;
     opacity: 0.9;
+}
+
+/* Título principal */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+/* Contenedor de la lista */
+.Lista_de_noticias {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta individual */
+.Lista_de_noticias li {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #1c6e1e;
+}
+
+/* Efecto hover */
+.Lista_de_noticias li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Título de la noticia */
+.Lista_de_noticias h3 {
+    color: #1b5e20;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.Lista_de_noticias p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Botón */
+.Lista_de_noticias a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #2a662c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.Lista_de_noticias a:hover {
+    background: #266929;
+}
+
+body {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    font-family: 'Segoe UI', sans-serif;
 }

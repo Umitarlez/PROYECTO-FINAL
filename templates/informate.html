@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>noticias ambientales</h2>
+<ul class="Lista_de_noticias">
+    {% for noticia in noticias %}
+    <li>
+        <h3>{{ noticia.title }}</h3>
+        <p>{{ noticia.description }}</p>
+        <a href="{{ noticia.url }}" target="_blank">
+            Ver más
+        </a>
+    </li>
+    {% else %}
+    <li>No hay noticias disponibles</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
